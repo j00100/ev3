@@ -1,4 +1,4 @@
-function NavBar(vista_actual){
+function NavBar(){
 
 	return(
 
