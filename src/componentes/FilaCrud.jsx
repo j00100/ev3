@@ -1,4 +1,6 @@
-function FilaCrud({nombre, tipo, edicion, n_copias}){
+function FilaCrud({carta, onEditar, onEliminar}){
+
+	const {nombre, tipo, edicion, n_copias} = carta;
 
 	return(
 
@@ -9,8 +11,8 @@ function FilaCrud({nombre, tipo, edicion, n_copias}){
 			<td>{n_copias}</td>
 			<td>
 				<div className = "d-flex gap-2">
-					<button className = "btn btn-warning btn-sm"></button>
-					<button className = "btn btn-danger btn-sm"></button>
+					<button className = "btn btn-warning btn-sm" onClick = {() => onEditar(carta)}>Editar</button>
+					<button className = "btn btn-danger btn-sm" onClick = {() => onEliminar(carta.id)}>Eliminar</button>
 				</div>
 			</td>
 

@@ -1,4 +1,6 @@
-function TablaCrud(){
+import FilaCrud from './FilaCrud.jsx';
+
+function TablaCrud({cartas, onEditar, onEliminar}){
 	
 	return(
 		<div className = "table-responsive">
@@ -12,8 +14,28 @@ function TablaCrud(){
 						<th>Acciones</th>
 					</tr>
 				</thead>
-
 				<tbody>
+
+					{cartas.lenght === 0 ? (
+
+						<tr>
+							<td colspan = "5" className = "text-center text-muted">
+								
+								No hay cartas registradas
+
+							</td>
+
+						</tr>
+
+						) : (
+
+							cartas.map((carta) =>
+
+								<FilaCrud key = {carta.id} carta = {carta} onEditar = {onEditar} onEliminar = {onEliminar} />
+							)
+
+						)
+					}
 					
 				</tbody>
 			</table>
@@ -22,3 +44,5 @@ function TablaCrud(){
 	);
 
 }
+
+export default TablaCrud;

@@ -1,4 +1,4 @@
-function NavBar(){
+function NavBar({vistaActual, setVistaActual}){
 
 	return(
 
@@ -7,11 +7,18 @@ function NavBar(){
 
 			<div className = "container-fluid d-flex justify-content-between align-items-center">
 			
-				<img src="" alt="">
+				
 
 				<div className = "d-flex gap-2">
-					<button className = "btn btn-primary">CRUD</button>
-					<button className = "btn btn-primary">Integracion API</button>
+
+					<button className = "{vistaActual} === 'crud' ? 'btn btn-primary' : 'btn btn-outline-light'" onClick = {() => setVistaActual('crud')}>
+						CRUD
+					</button>
+
+					<button className = "{vistaActual} === 'api' ? 'btn btn-primary' : 'btn btn-outline-light'" onClick = {() => setVistaActual('api')}>
+						Integracion API
+					</button>
+				
 				</div>
 			</div>
 
