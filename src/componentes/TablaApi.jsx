@@ -43,6 +43,9 @@ function TablaApi() {
         <div className="card shadow-sm mt-3">
 
             <div className="card-header bg-dark text-white d-flex align-items-center">
+
+                <i className = "bi bi-card-heading me-2"></i>
+
                 Cartas Destacadas API
             </div>
 

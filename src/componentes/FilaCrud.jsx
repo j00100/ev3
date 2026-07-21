@@ -11,8 +11,19 @@ function FilaCrud({carta, onEditar, onEliminar}){
 			<td>{n_copias}</td>
 			<td>
 				<div className = "d-flex gap-2">
-					<button className = "btn btn-warning btn-sm" onClick = {() => onEditar(carta)}>Editar</button>
-					<button className = "btn btn-danger btn-sm" onClick = {() => onEliminar(carta.id)}>Eliminar</button>
+					<button className = "btn btn-warning btn-sm" onClick = {() => onEditar(carta)}>
+					
+						<i className = "bi bi-pencil-square me-1"></i>
+						Editar
+					
+					</button>
+					
+					<button className = "btn btn-danger btn-sm" onClick = {() => onEliminar(carta.id)}>
+						
+						<i className = " bi bi-trash-fill me-1"></i>	
+						Eliminar
+					
+					</button>
 				</div>
 			</td>
 

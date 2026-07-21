@@ -90,8 +90,19 @@ function Formulario({onGuardar, cartaE, onCancelar}){
 
 					<div className = "mt-3 d-flex justify-content-end">
 
-						<button type = "submit" className = "btn btn-primary me-2">Guardar</button>
-						<button type = "button" className = "btn btn-secondary" onClick = {onCancelar}>Cancelar</button>
+						<button type = "submit" className = "btn btn-primary me-2">
+
+							<i className = {`bi ${cartaE ? 'bi-check-lg' : 'bi-plus-lg'} me-1`}></i>
+							{cartaE ? "Actualizar" : "Guardar"}
+
+						</button>
+
+						<button type = "button" className = "btn btn-secondary" onClick = {onCancelar}>
+							
+							<i className = "bi bi-x-lg me-1"></i>
+							Cancelar
+						
+						</button>
 					
 					</div>
 				
